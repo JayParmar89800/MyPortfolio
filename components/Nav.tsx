@@ -7,7 +7,6 @@ import { siteConfig } from "@/config/site";
 
 const Nav = () => {
     const pathname=usePathname();
-    console.log(pathname)
   return (
     <nav className="flex gap-8">
       {siteConfig.navItems.map((link, index) => {

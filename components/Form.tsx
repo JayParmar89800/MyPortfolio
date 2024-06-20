@@ -60,12 +60,12 @@ const Form = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-6 p-10 bg-bgdark rounded-xl"
     >
-      <h3 className="text-4xl text-accent">Let's work together</h3>
+      <h3 className="text-4xl text-accent">Get in touch</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-        asperiores quas ad beatae nam, ratione, molestias odio libero quos
-        laboriosam voluptatibus. A enim earum dolores sequi corrupti iure! Odio,
-        voluptatem!
+        I enjoy working with dedicated creatives from businesses that make the world beautifull.
+      </p>
+      <p>
+        We Can do so much together. Let's talk
       </p>
       <div className="flex flex-col gap-6">
         <Input

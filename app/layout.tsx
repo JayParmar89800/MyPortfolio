@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
@@ -13,11 +13,13 @@ const robotoslab = Roboto_Slab({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-robotoslab",
 });
+const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_LOCAL_URL;
+const baseURL = new URL(baseURLString as string);
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description:siteConfig.description,
-  // metadataBase: baseURL,
+  metadataBase: baseURL,
   icons: [
     {
       rel: "icon",
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    // url: process.env.SITE_URL,
+    url: baseURL,
     siteName: `${siteConfig.name}`,
     images: [
       {
@@ -84,21 +86,21 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: siteConfig.name,
   },
-  // authors: [
-  //   {
-  //     name: siteConfig.name,
-  //     url: process.env.SITE_URL,
-  //   },
-  // ],
-  // category: "Social Networking",
-  // creator: siteConfig.name,
+  authors: [
+    {
+      name: siteConfig.name,
+      url: baseURL,
+    },
+  ],
+  category: "Portfolio",
+  creator: siteConfig.name,
   // formatDetection: {
   //   address: false,
   //   date: false,
   //   email: false,
   //   telephone: false,
   // },
-  // publisher: siteConfig.name,
+  publisher: siteConfig.name,
 };
 
 export default function RootLayout({

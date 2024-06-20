@@ -13,7 +13,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Jay Parmar",
   description: "Frontend Developer",
-  // keywords:"Internships, Developer internships, Programming internships, Software development internships, Internship opportunities, Internship programs, Developer training, Developer resources, Coding tutorials, Programming blogs, Software development tutorials, Tech internships, IT internships, Web development internships, Career development, Coding skills, Development community, Internship platform, Learning resources, Career growth",
+ keywords: "Frontend Developer, Web Developer, Portfolio, Animated Portfolio, Professional Web Design, Responsive Web Design, Single Page Applications, SPA Development, HTML/CSS Expert, JavaScript Developer, TypeScript Developer, Tailwind CSS, Best Developer Portfolio, Web Development Services, Git Version Control, Custom Web Solutions",
   navItems: [
     {
       label: "Home",
@@ -26,10 +26,6 @@ export const siteConfig = {
     {
       label: "Resume",
       path: "/resume",
-    },
-    {
-      label: "Work",
-      path: "/work",
     },
     {
       label: "Contact",
@@ -84,14 +80,6 @@ export const siteConfig = {
         "Version control with Git allows for efficient tracking and management of changes in code, enabling collaboration among developers and ensuring project integrity.",
     },
   ],
-
-  // links: {
-  // 	github: "https://github.com/nextui-org/nextui",
-  // 	twitter: "https://twitter.com/getnextui",
-  // 	docs: "https://nextui.org",
-  // 	discord: "https://discord.gg/9b6yyZKmH4",
-  //     sponsor: "https://patreon.com/jrgarciadev"
-  // },
 };
 
 // about data
@@ -118,7 +106,7 @@ export const about = {
     },
     {
       fieldname: "Nationality",
-      fieldValue: "American",
+      fieldValue: "Indian",
     },
     {
       fieldname: "Email",
