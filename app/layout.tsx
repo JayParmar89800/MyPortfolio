@@ -13,8 +13,15 @@ const robotoslab = Roboto_Slab({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-robotoslab",
 });
-const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_LOCAL_URL;
-const baseURL = new URL(baseURLString as string);
+const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_LOCAL_URL || "https://jay-parmar.vercel.app/";
+let baseURL: URL;
+
+try {
+  baseURL = new URL(baseURLString);
+} catch (error) {
+  console.error("Invalid base URL:", baseURLString, error);
+  baseURL = new URL("https://jay-parmar.vercel.app/");
+}
 
 export const metadata: Metadata = {
   title: siteConfig.name,
