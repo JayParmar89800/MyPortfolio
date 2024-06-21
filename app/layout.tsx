@@ -23,36 +23,36 @@ export const metadata: Metadata = {
     {
       rel: "icon",
       type: "image/x-icon",
-      url: "favicon-images/favicon.ico",
+      url: `${baseURL}favicon-images/favicon.ico`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: "/favicon-images/favicon-16x16.png",
+      url: `${baseURL}favicon-images/favicon-16x16.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: "/favicon-images/favicon-32x32.png",
+      url: `${baseURL}favicon-images/favicon-32x32.png`,
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/favicon-images/apple-touch-icon.png",
+      url: `${baseURL}favicon-images/apple-touch-icon.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "192x192",
-      url: "/favicon-images/android-chrome-192x192.png",
+      url: `${baseURL}favicon-images/android-chrome-192x192.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "512x512",
-      url: "/favicon-images/android-chrome-512x512.png",
+      url:  `${baseURL}favicon-images/android-chrome-512x512.png`,
     },
   ],
   openGraph: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: `${siteConfig.name}`,
     images: [
       {
-        url: "/assets/myimage_1200_630.png",
+        url: `${baseURL.href}assets/myimage_1200_630.png`,
         alt: "OGI",
       },
     ],
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/image/myimage_1200_675.png",
+        url: `${baseURL.href}image/myimage_1200_675.png`,
         alt: "OGI",
       },
     ],
@@ -88,17 +88,11 @@ export const metadata: Metadata = {
   authors: [
     {
       name: siteConfig.name,
-      url: baseURL,
+      url:  baseURL.href,
     },
   ],
   category: "Portfolio",
   creator: siteConfig.name,
-  // formatDetection: {
-  //   address: false,
-  //   date: false,
-  //   email: false,
-  //   telephone: false,
-  // },
   publisher: siteConfig.name,
 };
 
