@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
-//Components
+// Components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
@@ -17,7 +17,7 @@ const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLI
 const baseURL = new URL(baseURLString as string);
 export const metadata: Metadata = {
   title: siteConfig.name,
-  description:siteConfig.description,
+  description: siteConfig.description,
   metadataBase: baseURL,
   icons: [
     {
@@ -52,17 +52,19 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/png",
       sizes: "512x512",
-      url:  `${baseURL}favicon-images/android-chrome-512x512.png`,
+      url: `${baseURL}favicon-images/android-chrome-512x512.png`,
     },
   ],
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    url: baseURL,
-    siteName: `${siteConfig.name}`,
+    url: baseURL.href,
+    siteName: siteConfig.name,
     images: [
       {
         url: `${baseURL.href}assets/myimage_1200_630.png`,
+        width: 1200,
+        height: 630,
         alt: "OGI",
       },
     ],
@@ -75,7 +77,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: `${baseURL.href}image/myimage_1200_675.png`,
+        url: `${baseURL.href}assets/myimage_1200_675.png`,
+        width: 1200,
+        height: 675,
         alt: "OGI",
       },
     ],
@@ -88,7 +92,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: siteConfig.name,
-      url:  baseURL.href,
+      url: baseURL.href,
     },
   ],
   category: "Portfolio",
@@ -103,11 +107,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${robotoslab.variable} bg-gradient-to-r from-primary to-[#006191] `}
-      >
+      <body className={`${robotoslab.variable} bg-gradient-to-r from-primary to-[#006191]`}>
         <Header />
-        <StairTransition/>
+        <StairTransition />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
