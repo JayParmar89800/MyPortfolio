@@ -15,6 +15,7 @@ const robotoslab = Roboto_Slab({
 });
 const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_LOCAL_URL;
 const baseURL = new URL(baseURLString as string);
+// console.log(baseURL.href)
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
@@ -23,36 +24,36 @@ export const metadata: Metadata = {
     {
       rel: "icon",
       type: "image/x-icon",
-      url: `${baseURL}favicon-images/favicon.ico`,
+      url: `${baseURL.href}favicon-images/favicon.ico`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: `${baseURL}favicon-images/favicon-16x16.png`,
+      url: `${baseURL.href}favicon-images/favicon-16x16.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: `${baseURL}favicon-images/favicon-32x32.png`,
+      url: `${baseURL.href}favicon-images/favicon-32x32.png`,
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: `${baseURL}favicon-images/apple-touch-icon.png`,
+      url: `${baseURL.href}favicon-images/apple-touch-icon.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "192x192",
-      url: `${baseURL}favicon-images/android-chrome-192x192.png`,
+      url: `${baseURL.href}favicon-images/android-chrome-192x192.png`,
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "512x512",
-      url: `${baseURL}favicon-images/android-chrome-512x512.png`,
+      url: `${baseURL.href}favicon-images/android-chrome-512x512.png`,
     },
   ],
   openGraph: {
