@@ -13,7 +13,8 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Jay Parmar",
   description: "Frontend Developer",
- keywords: "Frontend Developer, Web Developer, Portfolio, Animated Portfolio, Professional Web Design, Responsive Web Design, Single Page Applications, SPA Development, HTML/CSS Expert, JavaScript Developer, TypeScript Developer, Tailwind CSS, Best Developer Portfolio, Web Development Services, Git Version Control, Custom Web Solutions",
+  keywords:
+    "Frontend Developer, Web Developer, Portfolio, Animated Portfolio, Professional Web Design, Responsive Web Design, Single Page Applications, SPA Development, HTML/CSS Expert, JavaScript Developer, TypeScript Developer, Tailwind CSS, Best Developer Portfolio, Web Development Services, Git Version Control, Custom Web Solutions",
   navItems: [
     {
       label: "Home",
@@ -86,7 +87,7 @@ export const siteConfig = {
 export const about = {
   title: "About me",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis accusamus maxime placeat, cupiditate nam repellendus autem nemo eligendi voluptas culpa error! Blanditiis provident nobis accusamus molestiae et rem unde.",
+    "I am a passionate frontend developer dedicated to creating visually appealing and user-friendly web applications. As a speedy learner, I constantly seek to expand my knowledge and stay updated with the latest technologies and trends in the industry. I am always eager to learn more and enhance my skills to deliver the best possible solutions.",
   info: [
     {
       fieldname: "Name",
@@ -127,11 +128,23 @@ export const about = {
 export const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis accusamus maxime placeat, cupiditate nam repellendus autem nemo eligendi voluptas culpa error! Blanditiis provident nobis accusamus molestiae et rem unde.",
+  description: [
+    {
+      paragraph:
+        "As a frontend developer, my time with sulok digital solutions pvt. ltd. has been both rewarding and educational. I've gained a lot of knowledge and practical skills that have improved my abilities in web development.",
+    },
+    {
+      paragraph:
+        "I've not only strengthened my understanding of key frontend technologies but also learned a lot of extra information beyond the usual scope. This additional knowledge has been very valuable, giving me a broader perspective and better problem-solving skills.",
+    },
+    {
+      paragraph:
+        "Working in sulok digital solutions pvt. ltd.'s collaborative and innovative environment has been a constant source of motivation and learning. I've really enjoyed my experience here, and the skills and insights I've gained will definitely shape my future in frontend development.",
+    },
+  ],
   items: [
     {
-      company: "Sulok digital pvt ltd",
+      company: "sulok digital solutions pvt. ltd.",
       position: "Front-End developer",
       duration: "1 May 2023 - 1 May 2024",
     },
@@ -142,7 +155,7 @@ export const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis accusamus maxime placeat, cupiditate nam repellendus autem nemo eligendi voluptas culpa error! Blanditiis provident nobis accusamus molestiae et rem unde.",
+    "I have successfully completed my Secondary School Certificate (SSC) and Higher Secondary Certificate (HSC), which provided me with a solid foundation in core subjects and advanced studies. I then earned a Bachelor of Computer Applications (BCA) degree, where I gained in-depth knowledge and hands-on experience in computer applications, software development, and various aspects of IT. This comprehensive education has equipped me with the skills and expertise necessary for a successful career in technology and development.",
   items: [
     {
       intituation: "Sarswati Vidhyalay , Ashvanikumar,surat-8",
@@ -164,8 +177,7 @@ export const education = {
 // skills
 export const skills = {
   title: "My skills",
-  description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis accusamus maxime placeat, cupiditate nam repellendus autem nemo eligendi voluptas culpa error! Blanditiis provident nobis accusamus molestiae et rem unde.",
+  description:"As a frontend developer, I am proficient in HTML5, CSS, and JavaScript for building dynamic web pages. I have experience with frameworks like Tailwind CSS, Bootstrap, React.js, and Next.js for efficient development. I also use NextUI and MUI for designing responsive interfaces and leverage GitHub for version control. Additionally, my design skills are supported by my proficiency in Figma for creating and prototyping user interfaces.",
   skilllist: [
     {
       icon: ICONS.html,
@@ -206,6 +218,10 @@ export const skills = {
     {
       icon: ICONS.github,
       name: "Github",
+    },
+    {
+      icon: ICONS.figma,
+      name: "Figma",
     },
   ],
 };
