@@ -108,7 +108,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoslab.variable} bg-gradient-to-r from-primary to-[#006191]`}>
+      <body className={`${robotoslab.variable} bg-gradient-to-r from-primary to-[#01293c]`}>
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
