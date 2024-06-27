@@ -9,8 +9,8 @@ import Photo from "./Photo";
 
 const HeroContent = () => {
   return (
-    <section className="h-screen flex flex-col justify-center  mt-[5rem] 2xl:mt-0">
-      <div className="container mx-auto flex flex-col justify-around h-full">
+    <section className="h-screen flex flex-col justify-center ">
+      <div className="container mx-auto flex flex-col lg:justify-around h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between">
           {/* text */}
           <div className="text-center xl:text-left ">
