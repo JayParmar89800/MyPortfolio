@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="h-full w-full flex flex-col relative mt-[3rem] md:mt-0">
-      <div className="w-full mx-auto h-full  flex flex-col relative">
+    <section className="h-96 sm:h-[90vh] w-full flex flex-col relative">
+      <div className="w-full mx-auto h-full  flex flex-col relative justify-center">
         <div className="relative flex flex-col ">
           <motion.div
             initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ const Hero = () => {
             <VelocityScroll
               text="FRONT-END"
               default_velocity={10}
-              className="bg-gradient-to-b from-white to-accent bg-clip-text text-transparent"
+              className="bg-gradient-to-b from-white to-accent text-transparent bg-clip-text"
             />
           </motion.div>
         </div>
