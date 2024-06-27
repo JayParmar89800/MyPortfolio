@@ -5,8 +5,8 @@ import HeroContent from "@/components/HeroContent";
 const Home = () => {
   return (
     <>
-    <Hero/>
-    <HeroContent/>
+      <Hero/>
+      <HeroContent/>
     </>
   );
 };

@@ -17,7 +17,7 @@ const StairTransition = () => {
             <Stairs />
           </div>
           <motion.div
-            className="h-screen w-screen fixed bg-gradient-to-r from-primary to-[#006191] top-0 pointer-events-none"
+            className="h-screen w-screen fixed bg-gradient-to-r from-primary to-[#01293c] top-0 pointer-events-none"
             initial={{ opacity: 1 }}
             animate={{
               opacity: 0,
