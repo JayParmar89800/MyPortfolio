@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { siteConfig } from "@/config/site";
+import ThemeProvider from "./providers";
 
 const robotoslab = Roboto_Slab({
   subsets: ["latin"],
@@ -108,10 +109,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoslab.variable} bg-gradient-to-r from-primary to-[#01293c]`}>
+      <body className={`${robotoslab.variable} bg-white dark:bg-gradient-to-r from-primary to-[#01293c]`}>
+      <ThemeProvider attribute="class" defaultTheme="dark" >
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
       </body>
     </html>
   );

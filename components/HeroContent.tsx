@@ -10,7 +10,7 @@ import Clouds from "./Clouds";
 
 const HeroContent = () => {
   return (
-    <section className="h-screen flex flex-col justify-center ">
+    <section className="h-screen flex flex-col justify-center dark:text-white text-black">
       <div className="container mx-auto flex flex-col lg:justify-around h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between">
           {/* text */}
@@ -38,7 +38,7 @@ const HeroContent = () => {
               </div>
             </h1>
             <BoxReveal boxColor={"#00a7fa"} duration={0.5}>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9">
               As a passionate frontend developer, I bring ideas to life by
               crafting visually stunning and highly functional web experiences
               that are both user-centric and innovative
