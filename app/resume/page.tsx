@@ -37,11 +37,11 @@ const Resume = () => {
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-4xl font-bold dark:text-white text-black">{experience.title}</h3>
                 
                   {experience.description.map((description,index)=>{
                     return (
-                      <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{description.paragraph}</p>
+                      <p className="max-w-[600px] dark:text-white/60 text-black mx-auto xl:mx-0">{description.paragraph}</p>
                     )
                   })}
                 <ScrollArea className="h-[400px]">
@@ -72,8 +72,8 @@ const Resume = () => {
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold dark:text-white text-black">{education.title}</h3>
+                <p className="max-w-[600px] dark:text-white/60 text-black mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -104,8 +104,8 @@ const Resume = () => {
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left dark:text-white text-black">
+                  <h3 className="text-4xl font-bold ">{skills.title}</h3>
                   <p className="max-w-[600px]">{skills.description}</p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
@@ -120,7 +120,7 @@ const Resume = () => {
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
+                              <p className="capitalize ">{skill.name}</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -136,16 +136,16 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold dark:text-white text-black">{about.title}</h3>
+                <p className="max-w-[600px] dark:text-white/60 text-black mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li key={index} className="flex items-center justify-start gap-4">
-                        <span className="text-white/60">{item.fieldname}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="dark:text-white/60 text-black">{item.fieldname}</span>
+                        <span className="dark:text-white text-black text-xl">{item.fieldValue}</span>
                       </li>
                     );
                   })}

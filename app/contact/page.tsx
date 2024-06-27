@@ -31,30 +31,6 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            {/* <form
-              action=""
-              className="flex flex-col gap-6 p-10 bg-bgdark rounded-xl"
-            >
-              <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                asperiores quas ad beatae nam, ratione, molestias odio libero
-                quos laboriosam voluptatibus. A enim earum dolores sequi
-                corrupti iure! Odio, voluptatem!
-              </p>
-              <div className="flex flex-col gap-6">
-                <Input type="fullname" placeholder="Full name" />
-                <Input type="email" placeholder="Email address" />
-              </div>
-              
-              <Textarea
-                className="h-[200px]"
-                placeholder="Type your message here"
-              />
-              <Button size="md" className="max-w-40">
-                Send message
-              </Button>
-            </form> */}
             <Form/>
           </div>
           {/* info */}
@@ -67,8 +43,8 @@ const Contact = () => {
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      <p className="dark:text-white/60 text-black">{item.title}</p>
+                      <h3 className="text-xl dark:text-white text-black">{item.description}</h3>
                     </div>
                   </li>
                 )

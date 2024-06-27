@@ -24,20 +24,19 @@ const Hero = () => {
             />
           </motion.div>
         </div>
-        <div className="relative flex flex-col">
+        <div className="relative flex flex-col dark:text-white text-black">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: { delay: 2, duration: 0.3, ease: "easeInOut" },
             }}
-            className="text-center font-extrabold text-fluid-2xl tracking-wide text-stroke-sm  md:text-stroke-md text-stroke-color-white  mx-auto w-full z-40"
+            className="text-center font-extrabold text-fluid-2xl tracking-wide text-stroke-sm  md:text-stroke-md dark:text-stroke-color-white text-stroke-color-black mx-auto w-full z-40"
           >
             {/* DEVELOPER */}
             <VelocityScroll
               text="DEVELOPER"
               default_velocity={-10}
-              // className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
             />
           </motion.div>
           <motion.div
@@ -52,11 +51,15 @@ const Hero = () => {
             <VelocityScroll
               text="DEVELOPER"
               default_velocity={-1}
-              // className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
             />
           </motion.div>
         </div>
-        <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[600px] xl:h-[600px] absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 mx-auto   z-30">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 2, duration: 0.3, ease: "easeInOut" },
+            }} className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[600px] xl:h-[600px] absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 mx-auto   z-30">
           <Image
             src="/assets/photo.png"
             priority
@@ -65,7 +68,7 @@ const Hero = () => {
             alt="My Photo"
             className="object-contain rounded-full "
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

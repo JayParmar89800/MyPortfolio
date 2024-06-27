@@ -58,7 +58,7 @@ const Form = () => {
     <Toaster  richColors={true}/>
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-6 p-10 bg-bgdark rounded-xl"
+      className="flex flex-col gap-6 xl:p-10 p-5 bg-bgdark rounded-xl"
     >
       <h3 className="text-4xl text-accent">Get in touch</h3>
       <p>
