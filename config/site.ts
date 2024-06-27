@@ -220,6 +220,10 @@ export const skills = {
       name: "Github",
     },
     {
+      icon: ICONS.git,
+      name: "Git",
+    },
+    {
       icon: ICONS.figma,
       name: "Figma",
     },

@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaGitAlt 
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 import {
@@ -37,5 +38,6 @@ export const ICONS = {
   github: icon(SiGithub),
   phone:icon(FaPhoneAlt),
   email:icon(FaEnvelope),
-  address:icon(FaMapMarkerAlt)
+  address:icon(FaMapMarkerAlt),
+  git:icon(FaGitAlt)
 };
