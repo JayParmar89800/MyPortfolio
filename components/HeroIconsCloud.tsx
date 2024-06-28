@@ -24,7 +24,7 @@ const slugs = [
 
 const HeroIconsCloud = () => {
   return (
-    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background px-10 pb-10 pt-8 ">
+    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background p-5 ">
       <IconCloud iconSlugs={slugs} />
     </div>
   )

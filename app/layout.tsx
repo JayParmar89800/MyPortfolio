@@ -109,8 +109,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoslab.variable} bg-white dark:bg-gradient-to-r from-primary to-[#01293c]`}>
-      <ThemeProvider attribute="class" defaultTheme="dark" >
+      <body className={`${robotoslab.variable}  dark:bg-gradient-to-r dark:from-black dark:to-[#01293c] bg-gradient-to-r from-white to-[#01293c]`}>
+      <ThemeProvider attribute="class" defaultTheme="dark"  disableTransitionOnChange>
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

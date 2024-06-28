@@ -20,7 +20,7 @@ const Hero = () => {
             <VelocityScroll
               text="FRONT-END"
               default_velocity={10}
-              className="bg-gradient-to-b from-white to-accent text-transparent bg-clip-text"
+              className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent text-transparent bg-clip-text"
             />
           </motion.div>
         </div>
