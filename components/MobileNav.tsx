@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { siteConfig } from "@/config/site";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -18,7 +19,7 @@ const MobileNav = () => {
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-semibold dark:text-white text-black">
               Jay<span className="text-accent">.</span>
             </h1>
           </Link>
@@ -30,13 +31,16 @@ const MobileNav = () => {
               <SheetClose  key={index} asChild>
               <Link
                 href={link.path}
-                className={`${link.path==pathname && "text-accent border-b-2 border-accent"} text-xl capitalize hover:text-accent transition-all`}
+                className={`${link.path==pathname && "!text-accent border-b-2 border-accent"} dark:text-white text-black text-xl capitalize hover:text-accent transition-all`}
               >
                 {link.label}
               </Link>
               </SheetClose>
             );
           })}
+           <Link href="/contact">
+            <Button>Hire me</Button>
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>
