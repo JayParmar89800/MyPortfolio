@@ -60,10 +60,22 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        "gradient": {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "gradient": "gradient 8s linear infinite",
       },
       bgGradientDeg: {
         75: '75deg',  // Including the custom 75 degree angle in the theme
@@ -73,6 +85,10 @@ const config = {
         sm: '1px',
         md: '2px',
         lg: '3px',
+      },
+      borderColor: {
+        'custom-light': '#7e7c7c',
+        'custom-dark': '#a9a9a929',
       },
     },
   },
