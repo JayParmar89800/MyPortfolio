@@ -1,19 +1,6 @@
 "use client";
 
 import Form from "@/components/Form";
-// Components
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { contact } from "@/config/site";
 import { motion } from "framer-motion";
 
@@ -39,7 +26,7 @@ const Contact = () => {
               {contact.info.map((item,index)=>{
                 return (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="w-[52px] h-[52px] xl:w-[60px] xl:h-[60px] bg-bgdark text-accent rounded-md flex items-center justify-center">
+                    <div className="w-[52px] h-[52px] xl:w-[60px] xl:h-[60px] border-[0.2px] dark:border-custom-dark border-custom-light shadow-lg text-accent rounded-md flex items-center justify-center">
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">

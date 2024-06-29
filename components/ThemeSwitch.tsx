@@ -1,6 +1,5 @@
-"use client";
-
-import { FC } from "react";
+"use client"
+import { FC, useEffect, useState } from "react";
 import { AiFillSun } from 'react-icons/ai';
 import { BiSolidMoon } from 'react-icons/bi';
 import { useTheme } from 'next-themes';
@@ -11,9 +10,17 @@ export interface ThemeSwitchProps {
 }
 
 const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
-  const { theme, setTheme } = useTheme();
-  const isLight = theme === "light";
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isLight = resolvedTheme === "light";
+console.log(resolvedTheme,"resolvedTheme")
   const toggleTheme = () => {
     setTheme(isLight ? "dark" : "light");
   };

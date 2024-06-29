@@ -10,6 +10,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { easeIn, motion } from "framer-motion";
 import { about, education, experience, skills } from "@/config/site";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const Resume = () => {
   return (
@@ -50,7 +51,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-bgdark h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="border-[0.2px] dark:border-custom-dark border-custom-light dark:text-white text-black shadow-lg relative h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 overflow-hidden"
                         >
                           <span className="text-accent font-bold">
                             {item.duration}
@@ -60,8 +61,9 @@ const Resume = () => {
                           </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <p className="dark:text-white/60 text-black">{item.company}</p>
                           </div>
+                          <BorderBeam size={250} duration={7} delay={9} />
                         </li>
                       );
                     })}
@@ -82,7 +84,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-bgdark h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="border-[0.2px] dark:border-custom-dark border-custom-light dark:text-white text-black shadow-lg relative h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 overflow-hidden"
                         >
                           <span className="text-accent font-bold">
                             {item.duration}
@@ -92,8 +94,9 @@ const Resume = () => {
                           </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.intituation}</p>
+                            <p className="dark:text-white/60 text-black">{item.intituation}</p>
                           </div>
+                          <BorderBeam size={250} duration={7} delay={9} />
                         </li>
                       );
                     })}
@@ -114,10 +117,12 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider skipDelayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-bgdark rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                            <TooltipTrigger className="w-full h-[150px] border-[0.2px] dark:border-custom-dark border-custom-light shadow-lg relative rounded-xl flex justify-center items-center group overflow-hidden">
+                              <div className="text-6xl group-hover:text-accent dark:text-white text-black transition-all duration-300">
                                 {skill.icon}
                               </div>
+                              <BorderBeam size={100} duration={7} delay={9} />
+
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize ">{skill.name}</p>
