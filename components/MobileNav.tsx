@@ -16,16 +16,8 @@ const MobileNav = () => {
         <CiMenuFries className="text-[28px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
-          <Link href="/">
-            <h1 className="text-4xl font-semibold dark:text-white text-black">
-              Jay<span className="text-accent">.</span>
-            </h1>
-          </Link>
-        </div>
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8 my-auto ">
           {siteConfig.navItems.map((link, index) => {
             return (
               <SheetClose  key={index} asChild>
