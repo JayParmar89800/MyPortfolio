@@ -18,7 +18,7 @@ const HeroContent = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between">
           {/* text */}
           <div className="text-center xl:text-left flex flex-col justify-center xl:justify-start">
-            <div className="xl:w-auto w-full flex justify-center xl:justify-start xl:pb-0 mb-3">
+            <div className="xl:w-auto w-full flex justify-center xl:justify-start mb-3">
               <BoxReveal boxColor={"#005b94"} duration={0.5}>
                 {/* <span className="text-xl mx-auto">Frontend Developer</span> */}
                 {/* <div className="z-10 flex min-h-[16rem] items-center justify-center"> */}
