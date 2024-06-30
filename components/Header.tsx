@@ -49,15 +49,15 @@ const Header = () => {
               ease: "easeInOut",
             }}
           >
-            <h1 className="text-4xl  font-semibold">
+            <Link href="/" className="text-4xl  font-semibold">
               Jay<span className="text-accent">.</span>
-            </h1>
+            </Link>
           </motion.div>
         ) : (
           <div>
-            <h1 className="text-4xl  font-semibold">
+            <Link href="/" className="text-4xl  font-semibold">
               Jay<span className="text-accent">.</span>
-            </h1>
+            </Link>
           </div>
         )}
         {/* desktop nav */}

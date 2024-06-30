@@ -19,9 +19,8 @@ const Socials = ({ containerStyle, iconStyles }: SocialsProps) => {
       <Dock>
         {socials.map((item, index) => {
           return (
-            <DockIcon>
+            <DockIcon key={index}>
               <Link
-                key={index}
                 target="_blank"
                 href={item.path}
                 className={iconStyles}
