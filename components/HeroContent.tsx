@@ -70,6 +70,7 @@ const HeroContent = () => {
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <BoxReveal boxColor={"#005b94"} duration={0.5}>
+                <a href="/JayParmar.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
@@ -78,6 +79,7 @@ const HeroContent = () => {
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </Button>
+                </a>
               </BoxReveal>
               <div className="mb-8 xl:mb-0">
                 <BoxReveal boxColor={"#005b94"} duration={0.5}>
