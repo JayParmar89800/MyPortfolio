@@ -16,7 +16,6 @@ const robotoslab = Roboto_Slab({
 });
 const baseURLString = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_SITE_LOCAL_URL;
 const baseURL = new URL(baseURLString as string);
-// console.log(baseURL.href)
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,

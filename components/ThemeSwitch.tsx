@@ -20,7 +20,6 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
   if (!mounted) return null;
 
   const isLight = resolvedTheme === "light";
-console.log(resolvedTheme,"resolvedTheme")
   const toggleTheme = () => {
     setTheme(isLight ? "dark" : "light");
   };
