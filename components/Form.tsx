@@ -58,7 +58,6 @@ const Form = () => {
     };
     sendEmail(templateParams);
   };
-  console.log(errors);
 
   return (
     <>
