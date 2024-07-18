@@ -9,6 +9,7 @@ import StairTransition from "@/components/StairTransition";
 import { siteConfig } from "@/config/site";
 import ThemeProvider from "./providers";
 import "../styles/gradient-blur.css"
+import "../styles/style.css"
 
 const robotoslab = Roboto_Slab({
   subsets: ["latin"],
@@ -115,7 +116,6 @@ export default function RootLayout({
         <div className="dark:hidden gradient-03 blur-[110px] dark:blur-[125px] w-44 h-44 fixed bottom-[1%]  xl:bottom-[46%] left-0 z-[-1] " />
         <div className="dark:hidden gradient-02 blur-[110px] dark:blur-[125px] w-44 h-44 fixed bottom-[5%] left-[70%] z-[-1] " />
       <ThemeProvider attribute="class" defaultTheme="dark"  disableTransitionOnChange>
-        <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
         </ThemeProvider>

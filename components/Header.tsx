@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const matches = useMediaQuery("(min-width: 1200px)");
+  const matches = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,20 +48,21 @@ const Header = () => {
               duration: 0.5,
               ease: "easeInOut",
             }}
+            className="flex basis-1/5"
           >
             <Link href="/" className="text-4xl  font-semibold">
               Jay<span className="text-accent">.</span>
             </Link>
           </motion.div>
         ) : (
-          <div>
+          <div className="flex basis-1/5">
             <Link href="/" className="text-4xl  font-semibold">
               Jay<span className="text-accent">.</span>
             </Link>
           </div>
         )}
         {/* desktop nav */}
-        <div className="hidden xl:flex items-center gap-8 justify-center">
+        <div className="hidden md:flex items-center gap-8 justify-center">
           {isScrolled ? (
             <motion.div
               initial={{
@@ -76,9 +77,21 @@ const Header = () => {
                 duration: 0.7,
                 ease: "easeInOut",
               }}
-              className={`hidden xl:flex gap-2 z-50 backdrop-blur-lg bg-transparent py-2 ps-5 pe-[0.45rem] border border-accent rounded-full fixed mx-auto}`}
+              className={`hidden md:flex gap-2 z-50  fixed mx-auto}`}
             >
+              <motion.div
+              animate={{
+                y: [0, -7],
+              }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                repeatType: "mirror",
+              }}
+              
+              className="mx-auto backdrop-blur-lg bg-transparent py-2 ps-5 pe-[0.45rem] border border-accent rounded-full">
               <Nav />
+            </motion.div>
             </motion.div>
           ) : (
             <div className="flex justify-center items-center py-2 ps-5 pe-[0.45rem]">
@@ -98,17 +111,17 @@ const Header = () => {
               duration: 0.5,
               ease: "easeInOut",
             }}
-            className="xl:flex hidden"
+            className="md:flex hidden  basis-1/5 justify-end"
           >
             <ThemeSwitch />
           </motion.div>
         ) : (
-          <div className="xl:flex hidden">
+          <div className="md:flex hidden  basis-1/5 justify-end">
             <ThemeSwitch />
           </div>
         )}
         {/* Mobile nav */}
-        <div className="xl:hidden flex">
+        <div className="md:hidden flex">
           <ThemeSwitch />
           <MobileNav />
         </div>

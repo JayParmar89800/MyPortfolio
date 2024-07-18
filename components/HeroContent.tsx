@@ -1,58 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import Stats from "./Stats";
 import { Button } from "./ui/button";
 import Socials from "./Socials";
 import BoxReveal from "./magicui/box-reveal";
-import Clouds from "./Clouds";
-import AnimatedGradientText from "./magicui/animated-gradient-text";
-import { ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const HeroContent = () => {
+
+  const { resolvedTheme } = useTheme();
+  const [pdfDownloadLink, setPdfDownloadLink] = useState("/JayParmar.pdf");
+
+  useEffect(() => {
+    if (resolvedTheme) {
+      setPdfDownloadLink(
+        resolvedTheme === "dark" ? "/JayParmar-darkmode.pdf" : "/JayParmar.pdf"
+      );
+    }
+  }, [resolvedTheme]);
+
   return (
     <section className="h-screen flex flex-col justify-center dark:text-white text-black">
       <div className="container mx-auto flex flex-col lg:justify-around h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between">
+        <div className="flex flex-col xl:flex-row items-center justify-center">
           {/* text */}
           <div className="text-center xl:text-left flex flex-col justify-center xl:justify-start">
-            <motion.div
-              animate={{
-                y: [0, -10],
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                repeatType: "mirror",
-              }}
-              className="xl:w-auto w-full flex justify-center xl:justify-start mb-3"
-            >
-              <BoxReveal boxColor={"#005b94"} duration={0.5}>
-              
-                <AnimatedGradientText>
-                  🎉 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />{" "}
-                  <span
-                    className={cn(
-                      `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
-                    )}
-                  >
-                    Front-end Developer
-                  </span>
-                  <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                </AnimatedGradientText>
-              </BoxReveal>
-            </motion.div>
-
             <h1 className="h1 mb-6">
-              <div className="xl:w-auto w-full flex justify-center xl:justify-start">
+              <div className="xl:w-auto w-full flex justify-center">
                 <BoxReveal boxColor={"#005b94"} duration={0.5}>
                   <span>Hello I'm</span>
                 </BoxReveal>
               </div>
-              <div className="xl:w-auto w-full flex justify-center xl:justify-start">
+              <div className="xl:w-auto w-full flex justify-center">
                 <BoxReveal boxColor={"#005b94"} duration={0.5}>
                   <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
                     Jay Parmar
@@ -61,16 +42,16 @@ const HeroContent = () => {
               </div>
             </h1>
             <BoxReveal boxColor={"#005b94"} duration={0.5}>
-              <p className="max-w-[500px] mb-9">
+              <p className="max-w-[500px] mb-9 text-center">
                 As a passionate frontend developer, I bring ideas to life by
                 crafting visually stunning and highly functional web experiences
                 that are both user-centric and innovative
               </p>
             </BoxReveal>
 
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
               <BoxReveal boxColor={"#005b94"} duration={0.5}>
-                <a href="/JayParmar.pdf" download>
+                <a href={pdfDownloadLink} download>
                 <Button
                   variant="outline"
                   size="lg"
@@ -90,10 +71,6 @@ const HeroContent = () => {
                 </BoxReveal>
               </div>
             </div>
-          </div>
-          {/* photo */}
-          <div className=" mb-8 xl:mb-0">
-            <Clouds />
           </div>
         </div>
         <Stats />

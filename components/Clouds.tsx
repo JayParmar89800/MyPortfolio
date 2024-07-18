@@ -20,7 +20,7 @@ const Clouds = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[290px] h-[290px] xl:w-[460px] xl:h-[460px]"
+          className="w-[290px] h-[290px] xl:w-[460px] xl:h-[460px] mx-auto"
         >
           <HeroIconsCloud/>
         </motion.div>
