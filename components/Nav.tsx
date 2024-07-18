@@ -1,31 +1,29 @@
-"use client";
-
 import React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { Button } from "./ui/button";
+import Scroll from "./Scroll";
 
-const Nav = () => {
-  const pathname = usePathname();
+const Nav: React.FC = () => {
   return (
     <nav className="flex items-center gap-8">
-      {siteConfig.navItems.map((link, index) => {
-        return (
-          <Link
-            href={link.path}
-            key={index}
-            className={`${
-              link.path == pathname && "text-accent border-b-2 border-accent"
-            } capitalize font-medium hover:text-accent transition-all`}
+      <ul className="flex items-center gap-8">
+        {siteConfig.navItems.map((link) => (
+          <li
+            key={link.path}
+            className="hover:text-accent hover:border-b-2 hover:border-accent"
           >
-            {link.label}
-          </Link>
-        );
-      })}
-      <Link href="/contact">
-        <Button>Hire me</Button>
-      </Link>
+            <Scroll
+              to={link.path.replace("/", "").toLowerCase()}
+              className="capitalize font-medium hover:text-accent transition-all cursor-pointer"
+            >
+              {link.label}
+            </Scroll>
+          </li>
+        ))}
+        <Scroll to="contact">
+          <Button>Hire me</Button>
+        </Scroll>
+      </ul>
     </nav>
   );
 };

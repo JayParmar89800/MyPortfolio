@@ -1,6 +1,7 @@
 "use client";
 import { siteConfig } from "@/config/site";
 import CountUp from "react-countup";
+import NumberTicker from "./magicui/number-ticker";
 
 const Stats = () => {
   return (
@@ -10,7 +11,7 @@ const Stats = () => {
                 {siteConfig.state.map((item,index)=>{
                     return (
                         <div className="flex-1 flex flex-col xl:flex-row gap-4 items-center justify-center xl:justify-start" key={index}>
-                            <CountUp end={item.num} duration={5} delay={2} className="text-4xl xl:text-6xl font-extrabold"/>
+                            <NumberTicker value={item.num} className="text-4xl xl:text-6xl font-extrabold"/>
                             <p className={`${item.text.length < 15 ? "max-w-[100px]":"max-w-[150px]"} leading-snug dark:text-white/80 text-black text-center xl:text-start`}>{item.text}</p>
                         </div>
                     )

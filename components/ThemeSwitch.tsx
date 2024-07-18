@@ -4,6 +4,7 @@ import { AiFillSun } from 'react-icons/ai';
 import { BiSolidMoon } from 'react-icons/bi';
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 export interface ThemeSwitchProps {
   className?: string;
@@ -25,17 +26,30 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
       className={clsx(
         "flex items-center justify-center p-1 rounded-full cursor-pointer",
         className
       )}
       onClick={toggleTheme}
     >
-      <button>
-        {isLight ? <BiSolidMoon color='black' size={16} /> : <AiFillSun />}
-      </button>
-    </div>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{
+          duration: 0.2,
+          ease: "easeInOut",
+        }}
+      >
+        {isLight ? <BiSolidMoon color="black" size={16} /> : <AiFillSun />}
+      </motion.button>
+    </motion.div>
   );
 };
 

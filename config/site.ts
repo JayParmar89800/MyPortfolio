@@ -18,7 +18,7 @@ export const siteConfig = {
   navItems: [
     {
       label: "Home",
-      path: "/",
+      path: "/home",
     },
     {
       label: "Services",
@@ -232,17 +232,18 @@ export const skills = {
 export const contact = {
   info: [
     {
-      icon: ICONS.phone,
+      icon: "line-md:phone-call-twotone-loop",
+      style:{ color: "#13ff0f" },
       title: "Phone",
       description: "(+91) 898 0063 045",
     },
     {
-      icon: ICONS.email,
+      icon: "logos:google-gmail",
       title: "Email",
       description: "jayp89800@gmail.com",
     },
     {
-      icon: ICONS.address,
+      icon: "logos:google-maps",
       title: "Address",
       description: "Junagadh",
     },
