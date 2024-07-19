@@ -55,7 +55,7 @@ export const siteConfig = {
     {
       num: "01",
       title: "Responsive Web Design",
-      href: "/assets/services/Responsive-Web-Design.png",
+      href: "/assets/services/Responsive-Web-Design.jpeg",
       description:
         "Responsive Web Design ensures websites adapt seamlessly to any device, providing an optimal user experience on desktops, tablets, and smartphones.",
     },
