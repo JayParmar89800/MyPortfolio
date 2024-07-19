@@ -43,12 +43,9 @@ const HeroContent = () => {
                 </BoxReveal>
               </div>
               <div className="xl:w-auto w-full flex justify-center">
-                {/* <BoxReveal boxColor={"#005b94"} duration={0.5}> */}
                   <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
-                    {/* Jay Parmar */}
                     <TypewriterEffectSmooth words={words} />
                   </span>
-                {/* </BoxReveal> */}
               </div>
             </h1>
             <BoxReveal boxColor={"#005b94"} duration={0.5}>
