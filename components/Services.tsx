@@ -1,13 +1,13 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import { CardBody, CardContainer, CardItem } from "./aceternity/3d-card.tsx";
+import Image from "next/image";
 
 const Services = () => {
   return (
-    <section className="min-h-[100vh] flex flex-col justify-around py-12 xl:py-0 my-3">
+    <section className="min-h-[100vh] flex flex-col justify-around py-12 max-[350px]:py-20 xl:py-0 my-3">
       <motion.div
         animate={{
           y: [0, -10],
@@ -28,7 +28,7 @@ const Services = () => {
       </motion.div>
       <div className="container mx-auto">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
@@ -41,32 +41,33 @@ const Services = () => {
         >
           {siteConfig.services.map((service, index) => {
             return (
-              <div
-                key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group "
-              >
-                {/* top */}
-                <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-stroke-sm  md:text-stroke-md dark:text-stroke-color-white text-stroke-color-black text-transparent group-hover:text-stroke-color-[#005b94] transition-all ">
-                    {service.num}
-                  </div>
-                  <Link
-                    href={service.href}
-                    className="w-[70px] h-[70px] rounded-full dark:bg-white bg-black group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                  >
-                    <BsArrowDownRight className="dark:text-primary text-white text-3xl" />
-                  </Link>
-                </div>
-                {/* title */}
-                <h2 className="text-[42px] font-bold leading-none dark:text-white text-black group-hover:text-accent transition-all duration-500">
-                  {service.title}
-                </h2>
-                {/* description */}
-                <p className="dark:text-white/60 text-black">
-                  {service.description}
-                </p>
-                {/* border */}
-                <div className="border-b dark:border-white/20 border-black w-full"></div>
+              <div key={index} className="flex justify-center">
+                <CardContainer className="inter-var">
+                  <CardBody className="flex flex-col gap-y-5 bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gradient-to-r dark:from-black dark:to-[#01293c] dark:border-white/[0.2] border-black/[0.1] w-auto md:w-[22rem] lg:w-[25rem] xl:w-[30rem] h-auto rounded-xl p-6 border  ">
+                    <CardItem translateZ="100" className="w-full mt-4">
+                      <Image
+                        src={service.href}
+                        height="1000"
+                        width="1000"
+                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                        alt="thumbnail"
+                      />
+                    </CardItem>
+                    <CardItem
+                      translateZ="50"
+                      className="text-xl font-bold text-neutral-600 dark:text-white"
+                    >
+                      {service.title}
+                    </CardItem>
+                    <CardItem
+                      as="p"
+                      translateZ="60"
+                      className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
+                    >
+                      {service.description}
+                    </CardItem>
+                  </CardBody>
+                </CardContainer>
               </div>
             );
           })}

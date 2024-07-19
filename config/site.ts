@@ -47,7 +47,7 @@ export const siteConfig = {
       text: "Technologies mastered",
     },
     {
-      num: 607,
+      num: 685,
       text: "Code commits",
     },
   ],
@@ -55,28 +55,28 @@ export const siteConfig = {
     {
       num: "01",
       title: "Responsive Web Design",
-      href: "/services",
+      href: "/assets/services/Responsive-Web-Design.jpeg",
       description:
         "Responsive Web Design ensures websites adapt seamlessly to any device, providing an optimal user experience on desktops, tablets, and smartphones.",
     },
     {
       num: "02",
       title: "HTML/CSS Development",
-      href: "/services",
+      href: "/assets/services/HTMLCSS-Development.jpg",
       description:
         "HTML/CSS development involves creating the structure and style of web pages, ensuring they are both visually appealing and user-friendly. ",
     },
     {
       num: "03",
       title: "SPA Development",
-      href: "/services",
+      href: "/assets/services/SPA-Development.jpeg",
       description:
         "SPA development focuses on creating dynamic web applications that operate within a single web page, providing a seamless and responsive user experience similar to desktop applications.",
     },
     {
       num: "04",
       title: "Version Control (Git)",
-      href: "/services",
+      href: "/assets/services/Version-Control-(Git).png",
       description:
         "Version control with Git allows for efficient tracking and management of changes in code, enabling collaboration among developers and ensuring project integrity.",
     },

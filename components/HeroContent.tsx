@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import Socials from "./Socials";
 import BoxReveal from "./magicui/box-reveal";
 import { useTheme } from "next-themes";
+import { TypewriterEffectSmooth } from "./aceternity/typewriter-effect";
 
 const HeroContent = () => {
 
@@ -20,7 +21,15 @@ const HeroContent = () => {
       );
     }
   }, [resolvedTheme]);
+  const words = [
+    {
+      text: "Jay",
+    },
+    {
+      text: "Parmar",
+    },
 
+  ];
   return (
     <section className="h-screen flex flex-col justify-center dark:text-white text-black">
       <div className="container mx-auto flex flex-col lg:justify-around h-full">
@@ -34,11 +43,9 @@ const HeroContent = () => {
                 </BoxReveal>
               </div>
               <div className="xl:w-auto w-full flex justify-center">
-                <BoxReveal boxColor={"#005b94"} duration={0.5}>
                   <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
-                    Jay Parmar
+                    <TypewriterEffectSmooth words={words} />
                   </span>
-                </BoxReveal>
               </div>
             </h1>
             <BoxReveal boxColor={"#005b94"} duration={0.5}>
