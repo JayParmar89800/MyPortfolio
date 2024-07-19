@@ -47,7 +47,7 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
           ease: "easeInOut",
         }}
       >
-        {isLight ? <BiSolidMoon color="black" size={16} /> : <AiFillSun />}
+        {isLight ? <BiSolidMoon color="black" size={16} /> : <AiFillSun size={18} />}
       </motion.button>
     </motion.div>
   );
