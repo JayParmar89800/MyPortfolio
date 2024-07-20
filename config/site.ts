@@ -1,11 +1,3 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from "react-icons/fa";
 import { ICONS } from "./icon";
 
 export type SiteConfig = typeof siteConfig;
@@ -235,11 +227,13 @@ export const contact = {
       icon: "line-md:phone-call-twotone-loop",
       style:{ color: "#13ff0f" },
       title: "Phone",
+      href:"tel: +918980063045",
       description: "(+91) 898 0063 045",
     },
     {
       icon: "logos:google-gmail",
       title: "Email",
+      href:"mailto:jayp89800@gmail.com",
       description: "jayp89800@gmail.com",
     },
     {
