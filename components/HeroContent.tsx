@@ -1,26 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import Stats from "./Stats";
 import { Button } from "./ui/button";
 import Socials from "./Socials";
 import BoxReveal from "./magicui/box-reveal";
-import { useTheme } from "next-themes";
 import { TypewriterEffectSmooth } from "./aceternity/typewriter-effect";
 
 const HeroContent = () => {
 
-  const { resolvedTheme } = useTheme();
-  const [pdfDownloadLink, setPdfDownloadLink] = useState("/JayParmar.pdf");
-
-  useEffect(() => {
-    if (resolvedTheme) {
-      setPdfDownloadLink(
-        resolvedTheme === "dark" ? "/JayParmar-darkmode.pdf" : "/JayParmar.pdf"
-      );
-    }
-  }, [resolvedTheme]);
   const words = [
     {
       text: "Jay",
@@ -58,7 +46,7 @@ const HeroContent = () => {
 
             <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
               <BoxReveal boxColor={"#005b94"} duration={0.5}>
-                <a href={pdfDownloadLink} download>
+                <a href="/JayParmar.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
