@@ -57,7 +57,7 @@ const Resume = () => {
       <div className="method__inner">
         <div className={`method__wrap ${sticky ? "sticky" : ""}`}>
           <div
-            className={`method__single method__single--1 panel container ${
+            className={`method__single method__single--1 panel container z-20 ${
               fadeInClass === "method__single--1" ? "fade-in" : ""
             }`}
           >
