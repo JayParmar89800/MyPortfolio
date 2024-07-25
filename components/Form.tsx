@@ -19,6 +19,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const sendEmail = (params: TemplateParams) => {
     const toastId = toast.loading("Sending your message,please wait...");
@@ -40,6 +41,7 @@ const Form = () => {
             "I have received your message, I will get back to you soon!",
             { id: toastId }
           );
+          reset();
         },
         (error) => {
           toast.error(
