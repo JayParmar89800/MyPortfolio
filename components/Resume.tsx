@@ -88,7 +88,7 @@ const Resume = () => {
           >
             <div className="method__inside w-full flex xl:flex-row flex-col justify-between items-center xl:py-3">
               <div className="method__img xl:w-1/2 w-full">
-                <div className="dark:inline-block hidden glassmorphism blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[48%] left-0 z-[-1] " />
+                <div className="dark:inline-block hidden glassmorphism blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[48%] left-0 z-[-2] " />
 
                 <h2 className="h2 text-center">
                   <span>✨</span>
@@ -97,7 +97,7 @@ const Resume = () => {
                   </span>
                 </h2>
               </div>
-              <div className="method__content xl:w-1/2 w-full ">
+              <div className="method__content xl:w-1/2 w-full z-[-1]">
                 {/* <ScrollArea className="h-[400px]"> */}
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                   {experience.items.map((item, index) => {
