@@ -20,7 +20,9 @@ const HeroContent = () => {
   ];
   return (
     <section className="h-screen flex flex-col justify-center dark:text-white text-black">
-      <div className="container mx-auto flex flex-col lg:justify-around h-full">
+
+      <div className="container mx-auto flex flex-col lg:justify-around h-full relative">
+      <div className="dark:inline-block hidden  gradient-04 blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[80%]  xl:top-[20%] left-0 z-[-1] " />
         <div className="flex flex-col xl:flex-row items-center justify-center">
           {/* text */}
           <div className="text-center xl:text-left flex flex-col justify-center xl:justify-start">

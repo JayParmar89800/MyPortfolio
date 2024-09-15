@@ -22,6 +22,8 @@ const Clouds = () => {
           }}
           className="w-[290px] h-[290px] xl:w-[460px] xl:h-[460px] mx-auto"
         >
+            <div className="dark:inline-block hidden  hero-gradient blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[45%] md:left-[42%] left-[35%]  z-[-1] " />
+
           <HeroIconsCloud/>
         </motion.div>
       </motion.div>

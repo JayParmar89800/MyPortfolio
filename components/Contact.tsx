@@ -27,7 +27,7 @@ const Contact = () => {
             <ul className="flex flex-col gap-10">
               {contact.info.map((item, index) => {
                 return (
-                  <li key={index} className="flex items-center gap-6">
+                  <li key={index} className="flex items-center md:gap-6 gap-4">
                     <div className="w-[52px] h-[52px] xl:w-[60px] xl:h-[60px] border-[0.2px] dark:border-custom-dark border-custom-light shadow-lg text-accent rounded-md flex items-center justify-center">
                       <div className="text-[28px]">
                         <Iconify icon={item.icon} style={item.style} />
@@ -41,12 +41,12 @@ const Contact = () => {
                         <Link
                           target="blank"
                           href={item.href}
-                          className="text-xl dark:text-white text-black"
+                          className="md:text-xl text-lg dark:text-white text-black"
                         >
                           {item.description}
                         </Link>
                       ) : (
-                        <span className="text-xl dark:text-white text-black">
+                        <span className="md:text-xl text-lg dark:text-white text-black">
                           {item.description}
                         </span>
                       )}
