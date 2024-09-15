@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Clouds from "./Clouds";
 import { ScrollArea } from "./ui/scroll-area";
 import { BorderBeam } from "./magicui/border-beam";
-
+import { InfiniteMovingCards } from "./aceternity/infinite-moving-cards";
 
 const Resume = () => {
   const [sticky, setSticky] = useState(false);
@@ -13,10 +13,13 @@ const Resume = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-
       const method = document.querySelector(".method") as HTMLElement | null;
-      const methodWrap = document.querySelector(".method__wrap") as HTMLElement | null;
-      const methodInner = document.querySelector(".method__inner") as HTMLElement | null;
+      const methodWrap = document.querySelector(
+        ".method__wrap"
+      ) as HTMLElement | null;
+      const methodInner = document.querySelector(
+        ".method__inner"
+      ) as HTMLElement | null;
       const methodTop = methodInner?.offsetTop ?? 0;
       const fourthMethodHeight = (method?.clientHeight ?? 0) / 4;
 
@@ -63,7 +66,8 @@ const Resume = () => {
           >
             <div className="method__inside w-full flex xl:flex-row flex-col justify-between items-center">
               <div className="method__img xl:w-1/2 w-full">
-                <h2 className="h2 text-center">
+                <h2 className="h2 text-center relative">
+                  {/* <div className="hero-gradient blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[50%] left-[50%] z-[-1] " /> */}
                   <span>✨</span>
                   <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
                     Skills
@@ -84,6 +88,8 @@ const Resume = () => {
           >
             <div className="method__inside w-full flex xl:flex-row flex-col justify-between items-center xl:py-3">
               <div className="method__img xl:w-1/2 w-full">
+                <div className="dark:inline-block hidden glassmorphism blur-[110px] dark:blur-[125px] w-44 h-44 absolute top-[48%] left-0 z-[-1] " />
+
                 <h2 className="h2 text-center">
                   <span>✨</span>
                   <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
@@ -92,32 +98,32 @@ const Resume = () => {
                 </h2>
               </div>
               <div className="method__content xl:w-1/2 w-full ">
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="border-[0.2px] dark:border-custom-dark border-custom-light dark:text-white text-black shadow-lg relative h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 overflow-hidden"
-                        >
-                          <span className="text-accent font-bold">
-                            {item.duration}
-                          </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="dark:text-white/60 text-black lg:text-start text-center">
-                              {item.company}
-                            </p>
-                          </div>
-                          <BorderBeam size={250} duration={7} delay={9} />
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
+                {/* <ScrollArea className="h-[400px]"> */}
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  {experience.items.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="border-[0.2px] dark:border-slate-700 border-custom-light dark:text-white text-black shadow-lg h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 overflow-hidden"
+                      >
+                        <span className="text-accent font-bold">
+                          {item.duration}
+                        </span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="dark:text-white/60 text-black lg:text-start text-center">
+                            {item.company}
+                          </p>
+                        </div>
+                        {/* <BorderBeam size={250} duration={7} delay={9} /> */}
+                      </li>
+                    );
+                  })}
+                </ul>
+                {/* </ScrollArea> */}
               </div>
             </div>
           </div>
@@ -126,18 +132,16 @@ const Resume = () => {
               fadeInClass === "method__single--3" ? "fade-in" : ""
             }`}
           >
-            <div className="method__inside w-full flex xl:flex-row flex-col justify-between items-center">
-              <div className="method__img xl:w-1/2 w-full">
-                <h2 className="h2 text-center">
-                  <span>✨</span>
-                  <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
-                    Education
-                  </span>
-                </h2>
-              </div>
-              <div className="method__content xl:w-1/2 w-full ">
-                <ScrollArea className=" h-[500px] xl:h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+            <div className="method__inside w-full flex flex-col justify-evenly items-center">
+              <h2 className="h2 text-center">
+                <span>✨</span>
+                <span className="dark:bg-gradient-to-b dark:from-white dark:to-accent bg-gradient-to-b from-black to-accent bg-clip-text text-transparent">
+                  Education
+                </span>
+              </h2>
+              <div className="method__content  w-full ">
+                {/* <ScrollArea className=" h-[500px] xl:h-[400px]"> */}
+                {/* <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] overflow-y-auto">
                     {education.items.map((item, index) => {
                       return (
                         <li
@@ -160,8 +164,13 @@ const Resume = () => {
                         </li>
                       );
                     })}
-                  </ul>
-                </ScrollArea>
+                  </ul> */}
+                <InfiniteMovingCards
+                  items={education.items}
+                  direction="right"
+                  speed="slow"
+                />
+                {/* </ScrollArea> */}
               </div>
             </div>
           </div>
@@ -190,7 +199,7 @@ const Resume = () => {
                         <span className="dark:text-white/60 text-black">
                           {item.fieldname}
                         </span>
-                        <span className="dark:text-white text-black text-xl">
+                        <span className="dark:text-white text-black md:text-xl text-lg">
                           {item.fieldValue}
                         </span>
                       </li>
@@ -205,6 +214,5 @@ const Resume = () => {
     </div>
   );
 };
-
 
 export default Resume;

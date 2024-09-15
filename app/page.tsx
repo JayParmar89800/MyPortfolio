@@ -4,13 +4,16 @@ import Header from "@/components/Header";
 import Services from "@/components/Services";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
+import { ShootingStars } from "@/components/aceternity/shooting-stars";
 
 const Home = () => {
   return (
     <>
       <div id="home">
+
         <Header />
         <Hero />
+        <ShootingStars />
         <HeroContent />
       </div>
       <div id="services">

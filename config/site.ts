@@ -94,8 +94,8 @@ export const about = {
       fieldValue: "1 Year",
     },
     {
-      fieldname: "Skype",
-      fieldValue: "jay123",
+      fieldname: "LinkedIn",
+      fieldValue: "linkedin.com/in/jay-parmar-389483299/",
     },
     {
       fieldname: "Nationality",
@@ -138,7 +138,12 @@ export const experience = {
     {
       company: "sulok digital solutions pvt. ltd.",
       position: "Front-End developer",
-      duration: "1 May 2023 - 1 May 2024",
+      duration: "May 2023 - May 2024",
+    },
+    {
+      company: "Magic Technolabs Pvt. Ltd",
+      position: "React developer",
+      duration: "Sep 2024 - Present",
     },
   ],
 };
@@ -163,6 +168,11 @@ export const education = {
       intituation: "Dr Subhash College Of Computer Science",
       degree: "BCA",
       duration: "2021 - 2024",
+    },
+    {
+      intituation: "Dr Subhash University",
+      degree: "MCA",
+      duration: "2024 - Present",
     },
   ],
 };

@@ -71,12 +71,19 @@ const config = {
             backgroundPosition: "var(--bg-size) 0",
           },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "gradient": "gradient 8s linear infinite",
+        scroll:
+        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       bgGradientDeg: {
         75: '75deg',  // Including the custom 75 degree angle in the theme
@@ -93,7 +100,31 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),customGradientPlugin,customTextStrokePlugin],
+  plugins: [require("tailwindcss-animate"),customGradientPlugin,customTextStrokePlugin,addVariablesForColors],
 } satisfies Config
+
+function flattenColorPalette(colors: any, prefix = ''): any {
+  return Object.keys(colors).reduce((acc: any, key: string) => {
+    const value = colors[key];
+    if (typeof value === 'object') {
+      // Recursively flatten nested objects (like 'bgdark.100')
+      Object.assign(acc, flattenColorPalette(value, `${prefix}${key}-`));
+    } else {
+      acc[`${prefix}${key}`] = value;
+    }
+    return acc;
+  }, {});
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 
 export default config

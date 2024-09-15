@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="h-96 sm:h-[90vh] w-full flex flex-col relative">
+      <div className="dark:inline-block hidden  gradient-04 absolute blur-[110px] dark:blur-[125px] w-44 h-44  top-[48%] right-0 z-[-1] " />
+
+      <div className="dark:inline-block hidden  gradient-03 blur-[110px] dark:blur-[125px] w-44 h-44 absolute bottom-[10%]  xl:bottom-[75%] left-0 z-[-1] " />
+
       <div className="w-full mx-auto h-full  flex flex-col relative justify-center">
         <div className="relative flex flex-col ">
           <motion.div
