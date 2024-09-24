@@ -30,7 +30,7 @@ const Contact = () => {
                   <li key={index} className="flex items-center md:gap-6 gap-4">
                     <div className="w-[52px] h-[52px] xl:w-[60px] xl:h-[60px] border-[0.2px] dark:border-custom-dark border-custom-light shadow-lg text-accent rounded-md flex items-center justify-center">
                       <div className="text-[28px]">
-                        <Iconify icon={item.icon} style={item.style} />
+                        <Iconify icon={item.icon} />
                       </div>
                     </div>
                     <div className="flex-1">
