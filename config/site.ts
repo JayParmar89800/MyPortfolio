@@ -234,20 +234,19 @@ export const skills = {
 export const contact = {
   info: [
     {
-      icon: "line-md:phone-call-twotone-loop",
-      style:{ color: "#13ff0f" },
+      icon: "material-symbols:call",
       title: "Phone",
       href:"tel: +918980063045",
       description: "(+91) 898 0063 045",
     },
     {
-      icon: "logos:google-gmail",
+      icon: "ic:baseline-mail",
       title: "Email",
       href:"mailto:jayp89800@gmail.com",
       description: "jayp89800@gmail.com",
     },
     {
-      icon: "logos:google-maps",
+      icon: "ooui:map-pin",
       title: "Address",
       description: "Junagadh",
     },
