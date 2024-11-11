@@ -27,21 +27,24 @@ const Services = () => {
         </h2>
       </motion.div>
       <div className="container mx-auto">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 2.4,
-              duration: 0.4,
-              ease: "easeIn",
-            },
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {siteConfig.services.map((service, index) => {
             return (
-              <div key={index} className="flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delay:0.3,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  },
+                }}
+                viewport={{ once: true }}
+                key={index}
+                className="flex justify-center"
+              >
                 <CardContainer className="inter-var">
                   <CardBody className="flex flex-col gap-y-5 bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gradient-to-r dark:from-black dark:to-[#01293c] dark:border-white/[0.2] border-black/[0.1] w-auto md:w-[22rem] lg:w-[25rem] xl:w-[30rem] h-auto rounded-xl p-6 border  ">
                     <CardItem translateZ="100" className="w-full mt-4">
@@ -68,10 +71,10 @@ const Services = () => {
                     </CardItem>
                   </CardBody>
                 </CardContainer>
-              </div>
+              </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
