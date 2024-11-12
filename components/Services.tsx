@@ -27,7 +27,7 @@ const Services = () => {
         </h2>
       </motion.div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
           {siteConfig.services.map((service, index) => {
             return (
               <motion.div
